@@ -126,6 +126,7 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: white;
+    padding-bottom: 40px;
 }
 
 .titlefeature {

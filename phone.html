@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>phone</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="phone.css" />
   </head>
 
@@ -415,15 +416,15 @@
         }
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        alert("product has been add to cart");
-        // Swal.fire({
-        //   title: "Added to Cart!",
-        //   text: `${productName} has been added to your cart.`,
-        //   icon: "success",
-        //   confirmButtonText: "Cool!",
-        //   timer: 2000, // Set the timer to 3000ms (3 seconds)
-        //   timerProgressBar: true, // Show a progress bar during the timer
-        // });
+        // alert("product has been add to cart");
+        Swal.fire({
+          title: "Added to Cart!",
+          text: `${productName} has been added to your cart.`,
+          icon: "success",
+          confirmButtonText: "Cool!",
+          timer: 2000, // Set the timer to 3000ms (3 seconds)
+          timerProgressBar: true, // Show a progress bar during the timer
+        });
 
         // Update cart count in the cart-icon
         updateCartCount();

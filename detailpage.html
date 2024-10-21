@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detailpage</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="detailpage.css" />
   </head>
   <body>
@@ -113,6 +114,15 @@
       });
     }
     localStorage.setItem("cart", JSON.stringify(cart));
+        // alert("product has been add to cart")
+        Swal.fire({
+          title: "Added to Cart!",
+          text: `${product.name} has been added to your cart.`,
+          icon: "success",
+          confirmButtonText: "Cool!",
+          timer: 2000, // Set the timer to 3000ms (3 seconds)
+          timerProgressBar: true, // Show a progress bar during the timer
+        });
     updateCartCount();
     //update the quantity displayed on the product page
     document.getElementById("product-quantity").textContent = cart.find(item => item.name === product.name).quantity;
